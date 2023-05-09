@@ -192,6 +192,14 @@ input {
 #cvc {
     width: 69%;
 }
+.button {
+    width: 18rem;
+    color: white;
+    background-color: var(--neutral-very-dark-violet);
+    border-radius: 5px;
+    height: 2.5rem;
+    border: none;
+}
 #confirm-button {
     width: 18rem;
     color: white;
@@ -312,6 +320,10 @@ input {
         margin-right: 4rem;
         margin-top: 3.9rem;
         color: white;
+    }
+    .button {
+        width: 95%;
+        height: 3rem;
     }
     #confirm-button {
         width: 95%;
