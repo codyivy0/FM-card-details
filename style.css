@@ -185,6 +185,9 @@ input {
     border: none;
     margin-top: 1rem;
 }
+#confirm-button:hover{
+    cursor: pointer;
+}
 
 @media (max-width: 650px) {
     html{
@@ -209,19 +212,38 @@ input {
         margin-left: 5%;
         font-size: 20px;
         flex: auto;
-        width: 100vh;
+        width: auto;
+        justify-content: flex-start;
+        top: 4rem;
+        position: relative;
+  
+    }
+    input {
+        margin-bottom: 1rem;
+        width: 95%;
+        height: 2.5rem;
+        border: 1px solid var(--neutral-light-grayish-violet);
+        border-radius: 5px;
+        padding: .8rem;
+        box-sizing: border-box;
+    }
+    .input-group {
+        justify-content: space-between;
+        width: 95%;
     }
     #exp-date-mm {
-        width: 90%;
+        width: 5rem;
+        margin-right: .5remz;
     }
-    #exp-date-mm {
-        width: 90%;
+    #exp-date-yy {
+        width: 5rem;
     }
     #cvc {
-        width: 57%;
+        width: 7rem;
     }
     label {
-        font-size: 1rem;
+        font-size: .7rem;
+        width: 100%;
 
     }
 
@@ -245,14 +267,12 @@ input {
         flex-direction: row;
         font-size: .6rem;
     }
+    #expiration {
+        margin-left: auto;
+    }
 
     .card-front img {
         margin-bottom: 1rem;
-    }
-
-    #expiration {
-        margin-left: auto;
-        margin-right: 10rem;
     }
 
     .card-back {
@@ -267,5 +287,15 @@ input {
         margin-right: 4rem;
         margin-top: 3.9rem;
         color: white;
+    }
+    #confirm-button {
+        width: 95%;
+        height: 3rem;
+    }
+    label{
+        letter-spacing: 1px;
+    }
+    .input-group label {
+        width: 5rem;
     }
 }
