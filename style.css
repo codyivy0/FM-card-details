@@ -162,29 +162,23 @@
   }
 
   @media (max-width: 650px){
-    html{
-        width: 100vh;
-        height: 100%;
-    }
-    body{
-        width: 100vh;
-        height: 100%;
-    }
+
     main{
         flex-direction: column;
-        width: 100vh;
-        height: 100%;
-
     }
     .background{
         position: relative;
         background-image: url(./images/bg-main-mobile.png);
         background-repeat: no-repeat;
         background-size: cover;
+        flex: auto;
+
       }
       .input-fields{
         margin-left: 5%;
         font-size: 20px;
+        flex: auto;
+        width: 100%;
       }
       label{
         font-size: 1rem;
