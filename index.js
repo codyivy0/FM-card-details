@@ -6,18 +6,20 @@ const expirationElement = document.getElementById("expiration");
 const backNumber = document.getElementById("back-number");
 
 
-confirmBtn.addEventListener("click", (e) => {
-    e.preventDefault();
+confirmBtn.addEventListener("click", () => {
+    let allFieldsValid = true;
     inputFields.forEach((field) => {
         if (field.value.trim() === "") {
             const error = field.nextElementSibling;
             error.textContent = "Can't be blank";
             field.classList.add("red-border");
+            allFieldsValid = false;
         }
         else if (field.id === "card-number" && !/^\d{16}$/.test(field.value.trim())) {
             const error = field.nextElementSibling;
             error.textContent = "Wrong format, numbers only. Must be 16 digits";
             field.classList.add("red-border");
+            allFieldsValid = false;
         }
         else {
             const error = field.nextElementSibling;
@@ -43,5 +45,11 @@ confirmBtn.addEventListener("click", (e) => {
             }
         }
     });
+    if (allFieldsValid) {
+        document.querySelector(".input-fields").style.display = "none";
+        document.querySelectorAll(".complete").forEach((complete) => {
+            complete.style.display = "flex";
+        });
+    }
 });
 

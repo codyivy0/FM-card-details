@@ -33,40 +33,41 @@
       <p class="error">&nbsp;</p>
       
       <label for="card-number">CARD NUMBER</label>
-      <input type="text" maxlength="16" id="card-number" placeholder="e.g. 1234567891230000">
+      <input type="text" maxlength="16" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,16)" id="card-number" placeholder="e.g. 1234567891230000">
       <p id="card-error" class="error">&nbsp;</p>
       
       <div class="input-group">        
         <div id="exp-date-month">
           <label for="exp-date-mm">EXP. DATE</label>
-          <input type="text" maxlength="2" id="exp-date-mm" placeholder="MM">
+          <input type="text" maxlength="2" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,2)" id="exp-date-mm" placeholder="MM">
           <p class="error">&nbsp;</p>
         </div>
           <div id="exp-date-year">
             <label for="exp-date-yy">(MM/YY)</label>
-            <input type="text" maxlength="2" id="exp-date-yy" placeholder="YY">
+            <input type="text" maxlength="2" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,2)" id="exp-date-yy" placeholder="YY">
             <p class="error">&nbsp;</p>
           </div>
         
         <div class="cvc">
           <label for="cvc">CVC</label>
-          <input type="text" maxlength="3" id="cvc" placeholder="e.g. 123">
+          <input type="text" maxlength="3" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,3)" id="cvc" placeholder="e.g. 123">
           <p class="error">&nbsp;</p>
         </div>
       </div>
       
       <button type="submit" id="confirm-button">Confirm</button>
     </section>
-    
+    <section class="complete">
+      <img src="./images/icon-complete.svg" alt="complete icon">
+      <h1>Thank you!</h1>
+      <p id="complete-text" >We've added your card details</p>
+      <button id="confirm-button">Continue</button>
+    </section>
 </main>
 
   <!-- Completed state start -->
 
-  <section class="complete">
-    Thank you!
-    We've added your card details
-    Continue
-  </section>
+
   
 <script src="index.js"></script>
 </body>
