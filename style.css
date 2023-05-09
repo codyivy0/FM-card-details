@@ -129,7 +129,7 @@ label {
 }
 
 input {
-    margin-bottom: 1rem;
+
     width: 18rem;
     height: 2.5rem;
     border: 1px solid var(--neutral-light-grayish-violet);
@@ -137,15 +137,26 @@ input {
     padding: .8rem;
     box-sizing: border-box;
 }
+.error{
+    margin: 0;
+    color: red;
+    font-size: .6rem;
+    margin-bottom: 1rem;
+    width: 5rem;
+}
+#card-error{
+    width: 20rem;
+}
+.red-border{
+    border: 1px solid red;
+}
 
 .input-group label {
     margin-bottom: 0.5rem;
     text-align: left;
 }
 
-.input-group input {
-    margin-bottom: 1rem;
-}
+
 
 #exp-date-month {
     display: flex;
@@ -173,9 +184,8 @@ input {
 }
 
 #cvc {
-    width: 55%;
+    width: 69%;
 }
-
 #confirm-button {
     width: 18rem;
     color: white;
@@ -183,7 +193,7 @@ input {
     border-radius: 5px;
     height: 2.5rem;
     border: none;
-    margin-top: 1rem;
+
 }
 #confirm-button:hover{
     cursor: pointer;
@@ -214,12 +224,12 @@ input {
         flex: auto;
         width: auto;
         justify-content: flex-start;
-        top: 4rem;
+        top: 5rem;
         position: relative;
   
     }
     input {
-        margin-bottom: 1rem;
+
         width: 95%;
         height: 2.5rem;
         border: 1px solid var(--neutral-light-grayish-violet);
@@ -233,7 +243,7 @@ input {
     }
     #exp-date-mm {
         width: 5rem;
-        margin-right: .5remz;
+        margin-right: .5rem;
     }
     #exp-date-yy {
         width: 5rem;
@@ -269,6 +279,7 @@ input {
     }
     #expiration {
         margin-left: auto;
+        margin-right: 2rem;
     }
 
     .card-front img {
@@ -297,5 +308,8 @@ input {
     }
     .input-group label {
         width: 5rem;
+    }
+    .error{
+        margin-bottom: .6rem;
     }
 }
