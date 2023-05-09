@@ -230,13 +230,13 @@ input {
         flex: auto;
         width: auto;
         justify-content: flex-start;
-        top: 5rem;
+        top: 10%;
         position: relative;
   
     }
     .complete{
         flex: auto;
-        bottom: 5rem;
+        bottom: 10%;
         position: relative;
         margin-right: 0;
         width: 100%;
